@@ -83,7 +83,12 @@ go
 
 ### Minimum (for me)
 
+#### Web browser 
+
 Web browser (I try to stop using chrome, so Firefox here we go)
+I should take a look at <https://restoreprivacy.com/firefox-privacy/>
+
+#### Others
 vlc
 telegram
 spotify (snap)
