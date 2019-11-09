@@ -1,6 +1,6 @@
 # Reinstall my Linux OS
 
-I do it sometimes for good or bad reasons. These is a guide intended to do it quicker next time. At the end, it should become a script, because (automation is important)[https://queue.acm.org/detail.cfm?id=3197520] and it can be done (gradually)[https://blog.danslimmon.com/2019/07/15/do-nothing-scripting-the-key-to-gradual-automation/].
+I do it sometimes for good or bad reasons. These is a guide intended to do it quicker next time. At the end, it should become a script, because [automation is important](https://queue.acm.org/detail.cfm?id=3197520) and it can be done [gradually](https://blog.danslimmon.com/2019/07/15/do-nothing-scripting-the-key-to-gradual-automation/).
 
 The idea :
 1. Document the steps: just plain text, a kitchen recipe
@@ -29,6 +29,7 @@ In decreasing importance :
 * **Freon**: used to check for my CPU temperature
 
 How to install these extensions ? I prefer to use the CLI instead of the *horrible* web Gnome extensions interface...
+
 **TODO**: add the CLI snippets to install these extensions
 
 ```bash
