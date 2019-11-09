@@ -32,15 +32,6 @@ Advice: If you don't have much place on your only disk (my dual boot XPS13 9370 
 
 ## Shell configuration
 
-### Oh my god, zsh!
-
-*zsh* and *oh-my-zsh* are easy to install and so powerful, a no-brainier for me...
-zsh
-
-### Time to git and ssh
-
-ssh key with github, gitlab (CS, com, VR)
-
 ### CLI tools
 
 Tools that i found useful :
@@ -56,6 +47,22 @@ Tools that i found useful :
 ```bash
 sudo dnf install -y htop curl wget git tig jq unzip fzf
 ```
+
+### Oh my god, zsh!
+
+*zsh* and *oh-my-zsh* are easy to install and so powerful, a no-brainier for me...
+
+```bash
+sudo dnf install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+If you have your `.zshrc` lying around, you can now `source .zshrc`.
+
+### Time to git and ssh
+
+ssh key with github, gitlab (CS, com, VR)
+
+
 
 ## Graphic environment
 
