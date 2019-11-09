@@ -29,27 +29,6 @@ For my dual-boot Fedora 31 install, I used this partitioning scheme :
 
 Advice: If you don't have much place on your only disk (my dual boot XPS13 9370 256G), avoid to separate `/home` and `/` in separated `lvm` partitions.  
 
-## Graphic environment
-
-I mainly use Gnome, I have some extensions which I found useful...
-In decreasing importance :
-* **Tweaks**: useful to manage other extensions
-* **Window List**: display the windows list at the bottom of the screen. Yep I used to be on Windows...
-* **Places status indicator**: quick access to folders
-* **System-monitor**: I like to have a quick access to my CPU, RAM and Network use
-* **Freon**: used to check for my CPU temperature
-
-How to install these extensions ? I prefer to use the CLI instead of the *horrible* web Gnome extensions interface...
-
-**TODO**: add the CLI snippets to install these extensions
-
-```bash
-sudo dnf install gnome-tweaks
-```
-
-I may add a gnome config files to save all my configs, but there isn't much to tweak.
-
-At this point I'll configure my shell...
 
 ## Shell configuration
 
@@ -67,8 +46,32 @@ ssh key with github, gitlab (CS, com, VR)
 fzf
 tig
 htop
+jq
 
-### Configure the dev environnements
+## Graphic environment
+
+I mainly use Gnome, I have some extensions which I found useful...
+In decreasing importance :
+* **Tweaks**: useful to manage other extensions
+* [**Window List**](https://extensions.gnome.org/extension/602/window-list/): display the windows list at the bottom of the screen. Yep I used to be on Windows...
+* **Places status indicator**: quick access to folders
+* **System-monitor**: I like to have a quick access to my CPU, RAM and Network use
+* **Freon**: used to check for my CPU temperature
+
+How to install these extensions ? I prefer to use the CLI instead of the *horrible* web Gnome extensions interface...
+
+**TODO**: add the CLI snippets to install these extensions
+
+```bash
+sudo dnf install gnome-tweaks
+
+```
+
+I may add a gnome config files to save all my configs, but there isn't much to tweak.
+
+At this point I'll configure my shell...
+
+## Configure the dev environnements
 
 #### Python
 
