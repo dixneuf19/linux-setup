@@ -43,10 +43,19 @@ ssh key with github, gitlab (CS, com, VR)
 
 ### CLI tools
 
-fzf
-tig
-htop
-jq
+Tools that i found useful :
+- htop: better top, used to monitor ressources usage
+- curl
+- wget
+- git
+- tig: interactive `git status`
+- jq: useful to parse json
+- unzip: use to extract *zip* archives
+- fzf: a command line fuzzy finder
+
+```bash
+sudo dnf install -y htop curl wget git tig jq unzip fzf
+```
 
 ## Graphic environment
 
