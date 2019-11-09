@@ -20,6 +20,13 @@ Fedora Workstation with Gnome is my goto for the moment. Ubuntu is always a safe
 
 ### Disk partitioning
 
+I hade some issues because I was booting the USB-key legacy mode, and the installation kept asking to create a 1MB *GPT* partition or whatever. Be sure to boot in UEFI mode if the current installation is in this mode.
+
+For my dual-boot Fedora 31 install, I used this partitioning scheme :
+- a lvm partition `/` as root partition for Fedora
+- 1024 MB *boot* partion (*ext4*) mounted on `/boot`
+- a ~700 MB *efi* partition mounted on `'/boot/efi`
+
 Advice: If you don't have much place on your only disk (my dual boot XPS13 9370 256G), avoid to separate `/home` and `/` in separated `lvm` partitions.  
 
 ## Graphic environment
