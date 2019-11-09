@@ -10,6 +10,10 @@ The idea :
 
 Question: I'd like to keep a *text* documentation, like this markdown, with the script. How should I synchronize both ?
 
+## BIOS Setup
+
+Can be useful, check for the ArchLinux wiki (for my [XPS13](https://wiki.archlinux.org/index.php/Dell_XPS_13_(9370)))
+
 ## Install the OS
 
 Fedora Workstation with Gnome is my goto for the moment. Ubuntu is always a safe bet, and Manjaro seems OK too. 
