@@ -54,7 +54,7 @@ sudo dnf install -y htop curl wget git tig jq unzip fzf vim
 *zsh* and *oh-my-zsh* are easy to install and so powerful, a no-brainier for me...
 
 ```bash
-sudo dnf install -y zsh powerline-fonts
+sudo dnf install -y zsh powerline-fonts bzr
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 If you have your `.zshrc` lying around, you can now `source .zshrc`.
@@ -65,11 +65,51 @@ Otherwise here are some tweaks which i found important
 
 I kind of like *frisk* theme.
 
+```bash
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="frisk"/' .zshrc
+```
+
+I need to tweak a bit the dark color of the terminal after...
+
+#### zsh plugins
+
+I use:
+- common-aliases
+- git
+- docker: autocompletion 
+- fzf: better *CTRL + R*
+
+I'll add specific languages tools later.
+
+```bash
+plugins=(
+  git
+  common-aliases
+  docker
+  fzf
+)
+```
+
 ### Time to git and ssh
 
-ssh key with github, gitlab (CS, com, VR)
+I follow the [GitHub tutorial](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
+```bash
+ssh-keygen -t rsa -b 4096 -C "julen@loudnaround.org"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+sudo dnf install -y xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+```
 
+Then paste this key into the web interface of [GitHub](https://github.com/settings/ssh/new), [GitLab.com](https://gitlab.com/profile/keys), etc...
+
+Don't forget to configure your name and email on git !
+
+```bash
+git config --global user.name "Julen Dixneuf"
+git config --global user.email "julen@loudnaround.org"
+```
 
 ## Graphic environment
 
