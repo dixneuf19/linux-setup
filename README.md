@@ -43,9 +43,10 @@ Tools that i found useful :
 - jq: useful to parse json
 - unzip: use to extract *zip* archives
 - fzf: a command line fuzzy finder
+- vim
 
 ```bash
-sudo dnf install -y htop curl wget git tig jq unzip fzf
+sudo dnf install -y htop curl wget git tig jq unzip fzf vim
 ```
 
 ### Oh my god, zsh!
@@ -53,10 +54,16 @@ sudo dnf install -y htop curl wget git tig jq unzip fzf
 *zsh* and *oh-my-zsh* are easy to install and so powerful, a no-brainier for me...
 
 ```bash
-sudo dnf install -y zsh
+sudo dnf install -y zsh fonts-powerline
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 If you have your `.zshrc` lying around, you can now `source .zshrc`.
+
+Otherwise here are some tweaks which i found important
+
+#### Shell theme
+
+I kind of like *frisk* theme.
 
 ### Time to git and ssh
 
