@@ -289,7 +289,7 @@ To use your sdk `java` and `gradle` in your project, configure the correct paths
 
 ### Others
 
-calibre
-anki
+- **Calibre**: E-book library manager. `sudo dnf install -y calibre`
+- **Anki**: Flash card for spaced repetition. `sudo dnf install -y anki`
 
 
