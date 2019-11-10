@@ -54,7 +54,7 @@ sudo dnf install -y htop curl wget git tig jq unzip fzf vim
 *zsh* and *oh-my-zsh* are easy to install and so powerful, a no-brainier for me...
 
 ```bash
-sudo dnf install -y zsh fonts-powerline
+sudo dnf install -y zsh powerline-fonts
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 If you have your `.zshrc` lying around, you can now `source .zshrc`.
