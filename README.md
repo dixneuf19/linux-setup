@@ -113,44 +113,92 @@ git config --global user.email "julen@loudnaround.org"
 
 ## Graphic environment
 
+### Gnome extensions
+
 I mainly use Gnome, I have some extensions which I found useful...
 In decreasing importance :
 * **Tweaks**: useful to manage other extensions
 * [**Window List**](https://extensions.gnome.org/extension/602/window-list/): display the windows list at the bottom of the screen. Yep I used to be on Windows...
-* **Places status indicator**: quick access to folders
-* **System-monitor**: I like to have a quick access to my CPU, RAM and Network use
-* **Freon**: used to check for my CPU temperature
+* [**Places status indicator**](https://extensions.gnome.org/extension/8/places-status-indicator/): quick access to folders
+* [**system-monitor**](https://extensions.gnome.org/extension/120/system-monitor/): I like to have a quick access to my CPU, RAM and Network use
+* [**Freon**](https://extensions.gnome.org/extension/841/freon/): used to check for my CPU temperature
 
 How to install these extensions ? I prefer to use the CLI instead of the *horrible* web Gnome extensions interface...
 
-**TODO**: add the CLI snippets to install these extensions
-
 ```bash
 sudo dnf install gnome-tweaks
-
 ```
 
-I may add a gnome config files to save all my configs, but there isn't much to tweak.
+To install with CLI, I used this [script](https://github.com/cyfrost/install-gnome-extensions). To install it :
 
-At this point I'll configure my shell...
+```bash
+rm -f ./install-gnome-extensions.sh; wget -N -q "https://raw.githubusercontent.com/cyfrost/install-gnome-extensions/master/install-gnome-extensions.sh" -O ./install-gnome-extensions.sh && chmod +x install-gnome-extensions.sh && ./install-gnome-extensions.sh
+```
+
+Then you need to supply all the link of the extension in a file, `extensions.txt` for instance
+
+```
+https://extensions.gnome.org/extension/602/window-list/
+https://extensions.gnome.org/extension/8/places-status-indicator/
+https://extensions.gnome.org/extension/120/system-monitor/
+https://extensions.gnome.org/extension/841/freon/
+```
+
+Then you supply it to the cli.
+
+```bash
+./install-gnome-extensions.sh --enable --file links.txt
+```
+
+I may add a gnome config files to save all my configs, but there isn't much to tweak anyway.
+### Wallpapers
+
+You can install extra fedora backgrounds with
+
+```bash
+sudo dnf install f31-backgrounds-extras-gnome.noarch
+```
+
+Then you select the `/usr/share/backgrounds/f31/extras/f31-extras.xml` which points at the wallpapers in `gnome-tweaks`.
 
 ## Configure the dev environnements
 
 #### Python
 
-virtualenv & mkvirtualenv
+See my [gist](https://gist.github.com/dixneuf19/a398c08f00aac24609c3cc44c29af1f0).
 
 #### Javascript
 
-nvm (JS)
+TODO: nvm (JS)
 
 #### Java
 
-sdkman (java)
+[SDKMAN!](https://sdkman.io) is a very handy java JDK manager.
+
+```bash
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
+```
+
+And you should be good to go ! You can run `sdk install java` and `sdk install gradle`.
+
+You can list all available *java* installations with `sdk list java`, and use a specific one with `sdk use`, or default with `sdk default`.
 
 #### Golang
 
-go
+```
+sudo dnf install -y go
+mkdir $HOME/go
+```
+
+Add in you `.zshrc` :
+
+```bash
+#GOPATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+```
 
 ## Graphical applications
 
@@ -162,16 +210,82 @@ Web browser (I try to stop using chrome, so Firefox here we go)
 I should take a look at <https://restoreprivacy.com/firefox-privacy/>
 
 #### Others
-vlc
-telegram
-spotify (snap)
-a good text/md editor ?
+
+You'll need the RPM fusion repositories :
+
+```bash
+sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+- [**VLC**](https://www.videolan.org/vlc/download-fedora.html)
+
+```bash
+sudo dnf install -y vlc
+```
+
+- [**Telegram**](https://telegram.org/)
+
+```bash
+sudo dnf install -y telegram-desktop
+```
+
+- [**Snap**](https://snapcraft.io/): the canonical packaging system
+
+```bash
+sudo dnf install -y snapd
+sudo ln -s /var/lib/snapd/snap /snap
+```
+
+- [**Spotify**](https://www.spotify.com/fr/download/linux/)
+
+Using *Snap*
+
+```bash
+snap install spotify
+```
+
+- [**UberWriter**](https://flathub.org/apps/details/de.wolfvollprecht.UberWriter): an OK Markdown editor. Use the link.
+
+- **Transmission**: a very simple torrent downloader. `sudo dnf install -y transmission`
 
 ### Development
 
-vscode
-intellij (snap)
-snap
+#### [**VS Code**](https://code.visualstudio.com/docs/setup/linux)
+
+For almost everything!
+
+Snap installation is simple
+
+```bash
+snap install --classic code
+```
+
+A few extensions that I found useful :
+- Python
+- GitLens
+- Docker
+- Go
+- Lorem ipsum
+
+
+#### [IntelliJ](https://www.jetbrains.com/idea/)
+
+For Java.
+
+```bash
+snap install intellij-idea-ultimate --classic
+```
+
+If you don't have the ultimate version:
+
+```bash
+snap install intellij-idea-community --classic
+```
+
+To use your sdk `java` and `gradle` in your project, configure the correct paths in `File | Settings | Build, Execution, Deployment | Build Tools | Gradle` in IntelliJ :
+- Gradle : `$HOME/.sdkman/candidates/gradle/current`
+- Java : `$HOME/.sdkman/candidates/java/current`
+
 
 ### Others
 
