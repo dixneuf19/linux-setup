@@ -44,9 +44,10 @@ Tools that i found useful :
 - unzip: use to extract *zip* archives
 - fzf: a command line fuzzy finder
 - vim
+- httpie
 
 ```bash
-sudo dnf install -y htop curl wget git tig jq unzip fzf vim
+sudo dnf install -y htop curl wget git tig jq unzip fzf vim httpie
 ```
 
 ### Oh my god, zsh!
