@@ -46,6 +46,15 @@ Tools that i found useful :
 - vim
 - httpie
 
+**TODO**: On liner to adapt between platforms
+
+**Debian:**
+
+```bash
+sudo apt install -y htop curl wget git tig jq unzip fzf vim httpie
+```
+
+**Fedora:**
 ```bash
 sudo dnf install -y htop curl wget git tig jq unzip fzf vim httpie
 ```
@@ -54,8 +63,20 @@ sudo dnf install -y htop curl wget git tig jq unzip fzf vim httpie
 
 *zsh* and *oh-my-zsh* are easy to install and so powerful, a no-brainier for me...
 
+**Debian:**
+
+```bash
+sudo apt install -y zsh fonts-poweline
+```
+
+**Fedora:**
+
 ```bash
 sudo dnf install -y zsh powerline-fonts bzr
+```
+Then
+
+```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 If you have your `.zshrc` lying around, you can now `source .zshrc`.
