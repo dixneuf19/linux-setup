@@ -46,7 +46,7 @@ Tools that i found useful :
 - vim
 - httpie
 
-**TODO**: On liner to adapt between platforms
+**TODO**: One-liner to adapt between platforms
 
 **Debian:**
 
