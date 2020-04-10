@@ -73,7 +73,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 **Debian:**
 
 ```bash
-sudo apt install -y zsh fonts-poweline
+sudo apt install -y zsh fonts-powerline
 ```
 
 **Fedora:**
@@ -95,7 +95,7 @@ Otherwise here are some tweaks which i found important
 I kind of like *frisk* theme.
 
 ```bash
-sed -i 's/ZSH_THEME=".*"/ZSH_THEME="frisk"/' .zshrc
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="frisk"/' /.zshrc
 ```
 
 I need to tweak a bit the dark color of the terminal after...
