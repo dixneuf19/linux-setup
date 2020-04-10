@@ -42,7 +42,7 @@ Tools that i found useful :
 - tig: interactive `git status`
 - jq: useful to parse json
 - unzip: use to extract *zip* archives
-- fzf: a command line fuzzy finder
+- fzf: a command line fuzzy finder (Ubuntu users must install it directly from github)
 - vim
 - httpie
 
@@ -57,6 +57,13 @@ sudo apt install -y htop curl wget git tig jq unzip fzf vim httpie
 **Fedora:**
 ```bash
 sudo dnf install -y htop curl wget git tig jq unzip fzf vim httpie
+```
+
+**Ubuntu**
+```bash
+sudo apt install -y htop curl wget git tig jq unzip vim httpie
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 ```
 
 ### Oh my god, zsh!
