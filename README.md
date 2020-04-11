@@ -86,7 +86,7 @@ Then
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-If you have your `.zshrc` lying around, you can now `source .zshrc`.
+If you have your `.zshrc` lying around, you can now `source ~/.zshrc`.
 
 Otherwise here are some tweaks which i found important
 
@@ -95,7 +95,7 @@ Otherwise here are some tweaks which i found important
 I kind of like *frisk* theme.
 
 ```bash
-sed -i 's/ZSH_THEME=".*"/ZSH_THEME="frisk"/' /.zshrc
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="frisk"/' ~/.zshrc
 ```
 
 I need to tweak a bit the dark color of the terminal after...
