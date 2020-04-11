@@ -42,7 +42,7 @@ Tools that i found useful :
 - tig: interactive `git status`
 - jq: useful to parse json
 - unzip: use to extract *zip* archives
-- fzf: a command line fuzzy finder
+- fzf: a command line fuzzy finder (Ubuntu users must install it directly from github)
 - vim
 - httpie
 
@@ -59,6 +59,13 @@ sudo apt install -y htop curl wget git tig jq unzip fzf vim httpie
 sudo dnf install -y htop curl wget git tig jq unzip fzf vim httpie
 ```
 
+**Ubuntu**
+```bash
+sudo apt install -y htop curl wget git tig jq unzip vim httpie
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
 ### Oh my god, zsh!
 
 *zsh* and *oh-my-zsh* are easy to install and so powerful, a no-brainier for me...
@@ -66,7 +73,7 @@ sudo dnf install -y htop curl wget git tig jq unzip fzf vim httpie
 **Debian:**
 
 ```bash
-sudo apt install -y zsh fonts-poweline
+sudo apt install -y zsh fonts-powerline
 ```
 
 **Fedora:**
@@ -79,7 +86,7 @@ Then
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-If you have your `.zshrc` lying around, you can now `source .zshrc`.
+If you have your `.zshrc` lying around, you can now `source ~/.zshrc`.
 
 Otherwise here are some tweaks which i found important
 
@@ -88,7 +95,7 @@ Otherwise here are some tweaks which i found important
 I kind of like *frisk* theme.
 
 ```bash
-sed -i 's/ZSH_THEME=".*"/ZSH_THEME="frisk"/' .zshrc
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="frisk"/' ~/.zshrc
 ```
 
 I need to tweak a bit the dark color of the terminal after...
