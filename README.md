@@ -198,7 +198,14 @@ See my [gist](https://gist.github.com/dixneuf19/a398c08f00aac24609c3cc44c29af1f0
 
 #### Javascript
 
-TODO: nvm (JS)
+I use `nvm`, a Node Version Manager.
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+You can then install the last LTS version of Node with `nvm install --lts`, and use `npm` and `node` right away.
+
 
 #### Java
 
