@@ -267,6 +267,8 @@ sudo dnf install -y telegram-desktop
 
 - [**Snap**](https://snapcraft.io/): the canonical packaging system
 
+/!\ _I find apps installed with Snap quite slow, so now I avoid using this solution_
+
 ```bash
 sudo dnf install -y snapd
 sudo ln -s /var/lib/snapd/snap /snap
@@ -274,13 +276,38 @@ sudo ln -s /var/lib/snapd/snap /snap
 
 - [**Spotify**](https://www.spotify.com/fr/download/linux/)
 
-Using *Snap*
+Using apt
+
+```bash
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+```
+
+Using *Snap* (not recommended)
 
 ```bash
 snap install spotify
 ```
 
-- [**UberWriter**](https://flathub.org/apps/details/de.wolfvollprecht.UberWriter): an OK Markdown editor. Use the link.
+- [**Typora**](https://typora.io): a good Markdown editor
+
+```bash
+# or run:
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+
+# add Typora's repository
+
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+
+sudo apt-get update
+
+# install typora
+
+sudo apt-get install typora
+```
 
 - **Transmission**: a very simple torrent downloader. `sudo dnf install -y transmission`
 
@@ -290,7 +317,18 @@ snap install spotify
 
 For almost everything!
 
-Snap installation is simple
+With APT
+
+```bash
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install code # or code-insiders
+```
+
+Snap installation is simple (not recommended)
 
 ```bash
 snap install --classic code
